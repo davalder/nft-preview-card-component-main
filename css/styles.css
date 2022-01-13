@@ -1,0 +1,164 @@
+/*
+1. Posicionamiento
+2. Modelo de caja (Box model)
+3. Tipografía
+4. Visuales
+5. Otros
+*/
+
+:root{
+    /* Color */
+    /* Primary */
+
+    --Soft_blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+
+    /* Neutral */
+
+    --Very_dark_blue_main_BG: hsl(217, 54%, 11%);
+    --Very_dark_blue_card_BG: hsl(216, 50%, 16%);
+    --Very_dark_blue_line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+
+    /* Font */
+
+    --font-primary: 'Outfit', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: var(--font-primary);
+}
+
+.main {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100vw;
+    height: 100vh;
+    background: var(--Very_dark_blue_main_BG);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 32.8rem;
+    height: 54.5rem;
+    background: var(--Very_dark_blue_card_BG);
+    border-radius: 1rem;
+}
+
+.container__imagen {
+    min-width: 27.8rem;
+    height: 28rem;
+    margin-top: 2.5rem;
+    background-image: url('../assets/images/image-equilibrium.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 0.5rem;
+}
+
+.container__description {
+    max-width: 27.8rem;
+    height: 11rem;
+}
+
+.container__description p:nth-child(1) {
+    margin-top: 2.7rem;
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--White);
+}
+
+.container__description p:nth-child(2) {
+    margin-top: 1.3rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--Soft_blue);
+    line-height: 2.5rem;
+}
+
+.container__data {
+    display: flex;
+    justify-content: space-between;
+    max-width: 27.8rem;
+    min-width: 27.8rem;
+    height: 2rem;
+    margin-top: 2rem;
+}
+
+.container__data p:nth-child(1) {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--Cyan);
+}
+
+.container__data p:nth-child(1) span {
+    display: inline-block;
+    width: 1.1rem;
+    height: 1.9rem;
+    margin-right: 0.7rem;
+    background-image: url(../assets/icons/icon-ethereum.svg);
+}
+
+.container__data p:nth-child(2) {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--Soft_blue);
+}
+
+.container__data p:nth-child(2) span {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.7rem;
+    background-image: url(../assets/icons/icon-clock.svg);
+}
+
+.container__creator {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 27.8rem;
+    min-width: 27.8rem;
+    height: 5rem;
+    margin-top: 1.7rem;
+    padding-top: 1.7rem;
+    border-top: 0.1rem solid var(--Very_dark_blue_line);
+}
+
+.container__creator div {
+    display: inline-block;
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-right: 0.7rem;
+    background-image: url(../assets/images/image-avatar.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 0.1rem solid var(--White);
+    border-radius: 50%;
+}
+
+.container__creator p {
+    font-size: 1.3rem;
+    color: var(--Soft_blue);
+}
+
+.container__creator p a {
+    color: var(--White);
+    text-decoration:  none;
+}
