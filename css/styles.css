@@ -42,7 +42,7 @@ html {
     align-items: center;
     justify-content: space-around;
     width: 100vw;
-    height: 100vh;
+    height: 60rem;
     background: var(--Very_dark_blue_main_BG);
 }
 
@@ -84,11 +84,12 @@ html {
 
 .container__imagen:hover span {
     display: inline-block;
-    position: fixed;
+    position: absolute;
+    z-index: 2;
     width: 4.6rem;
     height: 3.1rem;
-    margin-right: 0.7rem;
-    background-image: url(../assets/icons/icon-view.svg);
+    /* margin-right: 0.7rem; */
+    background-image: url('../assets/icons/icon-view.svg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -195,5 +196,46 @@ html {
 }
 
 .container__creator p a:hover {
+    color: var(--Cyan);
+}
+
+.footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100vw;
+    height: 7rem;
+    padding-top: 1rem;
+    background: var(--Very_dark_blue_main_BG);
+}
+
+.footer div:nth-child(1) {
+    font-size: 1.3rem;
+    color: var(--Soft_blue);
+}
+
+.footer div:nth-child(1) a {
+    color: var(--White);
+    text-decoration:  none;
+}
+
+.footer div:nth-child(1) a:hover {
+    color: var(--Cyan);
+}
+
+.footer div:nth-child(2) {
+    padding-top: 0.5rem;
+    font-size: 1.3rem;
+    color: var(--Soft_blue);
+}
+
+.footer div:nth-child(2) a {
+    color: var(--White);
+    text-decoration:  none;
+}
+
+.footer div:nth-child(2) a:hover {
     color: var(--Cyan);
 }
